@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "logn"
+  name: "login"
 }
 </script>
 <style lang="scss" scoped>
