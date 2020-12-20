@@ -46,7 +46,7 @@ export default {
     login(formName) {
       this.$refs[formName].validate(valid => {
         if (valid){
-          console.log('submit')
+          this.$router.push('/main')
         }
       })
     }
@@ -64,7 +64,7 @@ export default {
   width: 350px;
   background: #fff;
   border-radius: 5px;
-  box-shadow: 0px 0px 46px #a8a3f5;
+  box-shadow: 0 0 46px #a8a3f5;
   margin: auto;
 }
 
