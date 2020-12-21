@@ -12,17 +12,17 @@ const routes = [
     {
         path: '/login',
         name: 'login',
-        component: import('@/views/login.vue')
+        component: () => import('@/views/login.vue')
     },
     {
         path: '/main',
         name: 'main',
-        component:import('@/views/main.vue')
+        component:() => import('@/views/main.vue')
     },
     {
         path: '*',
         name: '_404',
-        component:import('@/views/default/404.vue')
+        component:() => import('@/views/default/404.vue')
     }
 ]
 
