@@ -1,18 +1,31 @@
 <template>
-  <div>
-    <el-container>
-      <el-header>Header</el-header>
+  <div class="h-100">
+    <el-container class="h-100">
+      <el-aside width="auto">
+        <new_aside/>
+      </el-aside>
       <el-container>
-        <el-aside width="200px">Aside</el-aside>
-        <el-main>Main</el-main>
+        <el-header>
+          <nav_bar/>
+        </el-header>
+        <el-main>
+          <router-view/>
+        </el-main>
       </el-container>
     </el-container>
   </div>
 </template>
 
 <script>
+import nav_bar from "@/components/nav_bar.vue";
+import new_aside from "@/components/new_aside.vue";
+
 export default {
-  name: "main"
+  name: "new_main",
+  components: {
+    nav_bar,
+    new_aside
+  }
 }
 </script>
 

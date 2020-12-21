@@ -1,12 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-//登录页面
-let login = () => import('@/views/login.vue');
-let main = () => import('@/views/main.vue')
-//424页面
-let _404 = () => import('@/views/default/404.vue');
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -18,17 +12,17 @@ const routes = [
     {
         path: '/login',
         name: 'login',
-        component: login
+        component: import('@/views/login.vue')
     },
     {
         path: '/main',
         name: 'main',
-        component:main
+        component:import('@/views/main.vue')
     },
     {
         path: '*',
         name: '_404',
-        component:_404
+        component:import('@/views/default/404.vue')
     }
 ]
 
